@@ -1,0 +1,21 @@
+name: CPlusPlus Build
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: make
+      run: make -f /dev/null CPlusPlus
+      
+    - name: check executable
+      run: bash -c "[[ -x CPlusPlus ]]"
