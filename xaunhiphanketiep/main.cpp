@@ -10,7 +10,6 @@ void xuly()
     {
         i--;
     }
-
     if (i < 0)
     {
         for (int i = 0; i < s.size(); i++)
@@ -36,6 +35,5 @@ int main()
     freopen("out.out", "w", stdout);
     cin >> s;
     xuly();
-
     return 0;
 }

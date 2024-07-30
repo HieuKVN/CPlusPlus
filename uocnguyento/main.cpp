@@ -22,6 +22,7 @@ void sang(long long u)
         }
     }
 }
+
 int pt(int n)
 {
     int res = -1e9;
