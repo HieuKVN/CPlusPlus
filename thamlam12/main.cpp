@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
 int main()
@@ -10,22 +9,22 @@ int main()
     freopen("out.out", "w", stdout);
 
     cin >> n;
-    vector<int> sua(n);
+    int a[n];
 
     for (int i = 0; i < n; ++i)
     {
-        cin >> sua[i];
+        cin >> a[i];
     }
 
-    sort(sua.rbegin(), sua.rend());
+    sort(a, a + n);
 
     int s = 0;
 
     for (int i = 0; i < n; ++i)
     {
-        if (sua[i] - i > 0)
+        if (a[i] - i > 0)
         {
-            s += sua[i] - i;
+            s += a[i] - i;
         }
     }
 

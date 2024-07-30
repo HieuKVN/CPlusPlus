@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
 int main()
@@ -10,25 +9,25 @@ int main()
     freopen("out.out", "w", stdout);
 
     cin >> n;
-    vector<int> do_cung(n);
+    int a[n];
 
     for (int i = 0; i < n; ++i)
     {
-        cin >> do_cung[i];
+        cin >> a[i];
     }
 
-    sort(do_cung.begin(), do_cung.end());
+    sort(a, a + n);
 
-    int chieu_cao = 0;
+    int h = 0;
 
     for (int i = 0; i < n; ++i)
     {
-        if (do_cung[i] >= chieu_cao)
+        if (a[i] >= h)
         {
-            chieu_cao++;
+            h++;
         }
     }
 
-    cout << chieu_cao << endl;
+    cout << h << endl;
     return 0;
 }

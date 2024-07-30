@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
 struct farm
@@ -21,14 +20,14 @@ int main()
     freopen("out.out", "w", stdout);
 
     cin >> n >> m;
-    vector<farm> nong_dan(m);
+    vector<farm> a(m);
 
     for (int i = 0; i < m; ++i)
     {
-        cin >> nong_dan[i].gia >> nong_dan[i].so_luong;
+        cin >> a[i].gia >> a[i].so_luong;
     }
 
-    sort(nong_dan.begin(), nong_dan.end(), cmp);
+    sort(a.begin(), a.end(), cmp);
 
     int s = 0;
     int d = 0;
@@ -38,8 +37,8 @@ int main()
         if (d >= n)
             break;
 
-        int need = min(nong_dan[i].so_luong, n - d);
-        s += need * nong_dan[i].gia;
+        int need = min(a[i].so_luong, n - d);
+        s += need * a[i].gia;
         d += need;
     }
 
