@@ -59,6 +59,7 @@
   "C_Cpp.errorSquiggles": "disabled",
   "files.associations": {
     "complex": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "ostream": "cpp"
   }
 }
