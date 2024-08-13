@@ -3,73 +3,87 @@ using namespace std;
 
 int main()
 {
-    freopen("in.inp", "r", stdin);
-    freopen("out.out", "w", stdout);
+    freopen("in.inp", "r", stdin);   // Mở file in.inp để đọc dữ liệu đầu vào
+    freopen("out.out", "w", stdout); // Mở file out.out để ghi kết quả đầu ra
 
     int n;
-    cin >> n;
-    int a[n];
-    int t = 0;
+    cin >> n;         // Nhập số lượng phần tử
+    vector<int> a(n); // Khai báo vector chứa các phần tử
+    int tong = 0;     // Tổng của tất cả các phần tử
+
+    // Nhập các phần tử và tính tổng
     for (int i = 0; i < n; i++)
     {
         cin >> a[i];
-        t += a[i];
+        tong += a[i];
     }
 
-    t /= 2;
+    // Một nửa tổng của các phần tử (chỉ số này sẽ được sử dụng để chia nhóm)
+    int nua = tong / 2;
 
-    int f[t + 1];
-    int d[n + 1];
-    memset(d, 0, sizeof(f));
-    memset(f, -1, sizeof(f));
-    f[0] = 0;
+    // Khởi tạo mảng dp với giá trị -1, dùng để lưu trạng thái có thể đạt được tổng j
+    vector<int> dp(nua + 1, -1);
+    vector<int> d(n + 1, 0); // Mảng d để lưu các chỉ số phần tử thuộc nhóm đầu tiên
+    dp[0] = 0;               // Tổng 0 có thể đạt được mà không cần bất kỳ phần tử nào
 
+    // Cập nhật mảng dp dựa trên các phần tử hiện có
     for (int i = 1; i <= n; i++)
     {
-        for (int j = t; j >= a[i]; j--)
+        for (int j = nua; j >= a[i - 1]; j--)
         {
-            if (f[j - a[i]] != -1 && f[j] == -1)
+            // Nếu có thể đạt được tổng j - a[i - 1], cập nhật dp[j] với chỉ số phần tử i
+            if (dp[j - a[i - 1]] != -1 && dp[j] == -1)
             {
-                f[j] = i;
+                dp[j] = i; // Lưu chỉ số phần tử i
             }
         }
     }
 
-    s = t;
-
-    while (f[s] == -1)
+    // Tìm tổng gần nhất với nua mà có thể đạt được
+    int s = nua;
+    while (s > 0 && dp[s] == -1)
     {
         s--;
     }
+
+    // Xác định các phần tử thuộc nhóm đầu tiên
     while (s > 0)
     {
-        d[f[s]] = 1;
-        s = s - a[f[s]];
+        d[dp[s]] = 1;      // Đánh dấu phần tử thuộc nhóm đầu tiên
+        s -= a[dp[s] - 1]; // Giảm tổng s bằng giá trị phần tử được chọn
     }
 
+    // Tính tổng của các phần tử trong hai nhóm
     long long s1 = 0, s2 = 0;
-
-    for (i = 1; i <= n; i++)
+    for (int i = 0; i < n; i++)
     {
-        if (d[i] == 1)
+        if (d[i + 1] == 1)
         {
-            s1 += a[i];
+            s1 += a[i]; // Tổng của nhóm đầu tiên
         }
         else
-            s2 += a[i]
+        {
+            s2 += a[i]; // Tổng của nhóm thứ hai
+        }
     }
 
-    cout << abs(s1 - s2) << end;
+    // In hiệu số giữa hai nhóm
+    cout << abs(s1 - s2) << endl;
 
-    for (i = 1; i <= n; i++)
+    // In các phần tử của nhóm đầu tiên
+    for (int i = 0; i < n; i++)
     {
-        if (d[i] == 1)
+        if (d[i + 1] == 1)
+        {
             cout << a[i] << " ";
-        cout << endl;
+        }
     }
-    for (i = 1; i <= n; i++)
+    cout << endl;
+
+    // In các phần tử của nhóm thứ hai
+    for (int i = 0; i < n; i++)
     {
-        if (d[i] == 0)
+        if (d[i + 1] == 0)
         {
             cout << a[i] << " ";
         }
