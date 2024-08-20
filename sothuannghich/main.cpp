@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-long long s, i, n;
 
+// Hàm đảo ngược số
 int dn(int n)
 {
     int kq = 0;
@@ -13,12 +13,10 @@ int dn(int n)
     return kq;
 }
 
+// Hàm kiểm tra số đối xứng
 bool dx(int n)
 {
-    if (dn(n) == n)
-        return true;
-    else
-        return false;
+    return dn(n) == n;
 }
 
 int main()
@@ -26,17 +24,23 @@ int main()
     int n;
     freopen("in.inp", "r", stdin);
     freopen("out.out", "w", stdout);
+
     cin >> n;
     int a[n];
+
     for (int i = 0; i < n; i++)
     {
         cin >> a[i];
     }
-    int dem = 0;
+
+    // In các số đối xứng
     for (int i = 0; i < n; i++)
     {
         if (dx(a[i]))
+        {
             cout << a[i] << " ";
+        }
     }
+
     return 0;
 }

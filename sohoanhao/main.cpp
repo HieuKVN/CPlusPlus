@@ -1,10 +1,13 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
+// Hàm kiểm tra số hoàn hảo
 bool hoanhao(int n)
 {
-    int s = 1;
+    if (n <= 1)
+        return false; // Số nhỏ hơn hoặc bằng 1 không phải là số hoàn hảo
+
+    int s = 1; // Bắt đầu với 1 vì 1 luôn là ước số của bất kỳ số nào
     for (int i = 2; i * i <= n; ++i)
     {
         if (n % i == 0)
@@ -16,20 +19,19 @@ bool hoanhao(int n)
             }
         }
     }
-    if (s == n)
-        return true;
-    else
-        return false;
+    return s == n;
 }
 
 int main()
 {
-    int n, i;
-    freopen("in.inp", "r", stdin);
-    freopen("out.out", "w", stdout);
+    int n;
+    freopen("in.inp", "r", stdin);   // Mở file đầu vào để đọc dữ liệu
+    freopen("out.out", "w", stdout); // Mở file đầu ra để ghi kết quả
+
     cin >> n;
-    int a[n];
-    for (i = 1; i <= n; i++)
+    vector<int> a(n); // Sử dụng vector thay vì mảng tĩnh
+
+    for (int i = 0; i < n; i++)
     {
         cin >> a[i];
     }
@@ -41,4 +43,6 @@ int main()
             cout << a[i] << " ";
         }
     }
+
+    return 0;
 }

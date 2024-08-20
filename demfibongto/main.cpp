@@ -1,66 +1,64 @@
 #include <bits/stdc++.h>
 #define nmax 10000
 using namespace std;
-long long f[nmax];
-int a, b, n, i;
+
+bool f[nmax]; // Mảng đánh dấu số nguyên tố
+
+// Hàm sàng Eratosthenes để tính số nguyên tố
 void sang(long long u)
 {
-	long long j;
-	for (long long i = 0; i <= u; i++)
+	fill(f, f + u + 1, true); // Khởi tạo tất cả các số đều là số nguyên tố
+	f[0] = f[1] = false;	  // 0 và 1 không phải là số nguyên tố
+
+	for (long long i = 2; i * i <= u; i++)
 	{
-		f[i] = 1;
-	}
-	f[0] = f[1] = 0;
-	for (i = 2; i * i <= u; i++)
-	{
-		if (f[i])
+		if (f[i]) // Nếu i là số nguyên tố
 		{
-			for (j = i * i; j <= u; j += i)
-				f[j] = 0;
+			for (long long j = i * i; j <= u; j += i)
+				f[j] = false; // Đánh dấu các bội số của i là không phải số nguyên tố
 		}
 	}
 }
+
+// Hàm kiểm tra số Fibonacci
 bool ktrfibo(int n)
 {
-	long long i, f, fa, fb;
-	if (n == 1 || n == 2)
-		return 1;
-	else
+	if (n <= 0)
+		return false; // Các số âm không phải số Fibonacci
+	if (n == 1)
+		return true; // 1 là số Fibonacci (xuất hiện hai lần trong dãy Fibonacci)
+
+	long long fa = 1, fb = 1, f = fa + fb;
+	while (f < n) // Tạo dãy Fibonacci cho đến khi lớn hơn hoặc bằng n
 	{
-		fa = 1;
-		fb = 1;
+		fa = fb;
+		fb = f;
 		f = fa + fb;
-		i = 3;
-		while (f < n)
-		{
-			fa = fb;
-			fb = f;
-			f = fa + fb;
-			i++;
-		}
-		if (f == n)
-			return 1;
-		else
-			return 0;
 	}
+	return (f == n); // Kiểm tra xem n có phải là số Fibonacci không
 }
+
+// Hàm đếm số nguyên tố Fibonacci trong khoảng từ 1 đến n
 int ktr(int n)
 {
-	int dem;
-	sang(nmax);
-	for (i = 1; i <= n; i++)
+	int dem = 0;
+	sang(nmax); // Tính số nguyên tố
+
+	for (int i = 1; i <= n; i++)
 	{
 		if (ktrfibo(i) && f[i])
-			dem++;
+			dem++; // Tăng biến đếm nếu i là số Fibonacci và là số nguyên tố
 	}
-	return dem;
+
+	return dem; // Trả về số lượng số nguyên tố Fibonacci
 }
+
 int main()
 {
-	freopen("in.inp", "r", stdin);
-	freopen("out.out", "w", stdout);
+	freopen("in.inp", "r", stdin);	 // Mở file đầu vào
+	freopen("out.out", "w", stdout); // Mở file đầu ra
+	int n;
 	cin >> n;
-	int dem = 0;
-	cout << ktr(n);
+	cout << ktr(n); // In số lượng số nguyên tố Fibonacci trong khoảng từ 1 đến n
 	return 0;
 }

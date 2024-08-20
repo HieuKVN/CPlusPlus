@@ -2,27 +2,27 @@
 #define nmax 1000000
 using namespace std;
 
-long long f[nmax];
-long long s, i, n;
+long long f[nmax]; // Mảng lưu giá trị xác định số nguyên tố
 
 void sang(long long u)
 {
 	long long j;
 	for (long long i = 0; i <= u; i++)
 	{
-		f[i] = 1;
+		f[i] = 1; // Giả sử tất cả các số đều là số nguyên tố
 	}
-	f[0] = f[1] = 0;
-	for (i = 2; i * i <= u; i++)
+	f[0] = f[1] = 0; // 0 và 1 không phải là số nguyên tố
+	for (long long i = 2; i * i <= u; i++)
 	{
 		if (f[i])
 		{
 			for (j = i * i; j <= u; j += i)
-				f[j] = 0;
+				f[j] = 0; // Đánh dấu các bội số của i là không phải số nguyên tố
 		}
 	}
 }
 
+// Hàm đảo ngược số nguyên
 int dn(int n)
 {
 	int kq = 0;
@@ -34,34 +34,40 @@ int dn(int n)
 	return kq;
 }
 
+// Hàm kiểm tra số đối xứng
 bool dx(int n)
 {
-	if (dn(n) == n)
-		return true;
-	else
-		return false;
+	return dn(n) == n;
 }
 
+// Hàm kiểm tra số nguyên tố và số đối xứng
 bool sodep(int n)
 {
-	if (f[n] && dx(n))
-		return true;
-	else
-		return false;
+	return f[n] && dx(n);
 }
 
 int main()
 {
-	int m;
-	freopen("in.inp", "r", stdin);
-	freopen("out.out", "w", stdout);
-	sang(nmax);
+	int n;
+	freopen("in.inp", "r", stdin);	 // Mở file đầu vào để đọc dữ liệu
+	freopen("out.out", "w", stdout); // Mở file đầu ra để ghi kết quả
+	sang(nmax);						 // Tính toán và đánh dấu các số nguyên tố đến nmax
+
 	cin >> n;
-	m = n + 1;
-	while (sodep(m) == false)
+	int m = n + 1;
+
+	// Tìm số nguyên tố đối xứng lớn hơn n
+	while (m <= nmax) // Đảm bảo không vượt quá giới hạn của mảng f
 	{
-		m = m + 1;
+		if (sodep(m))
+		{
+			cout << m;
+			return 0;
+		}
+		m++;
 	}
-	cout << m;
+
+	// Nếu không tìm thấy số nguyên tố đối xứng trong khoảng [n, nmax]
+	cout << "No";
 	return 0;
 }

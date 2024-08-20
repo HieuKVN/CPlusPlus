@@ -2,38 +2,42 @@
 
 using namespace std;
 
+// Hàm tính GCD (Ước chung lớn nhất) bằng đệ quy
 int gcddequy(int a, int b)
 {
     if (b == 0)
-        return a;
+        return a; // Khi b là 0, GCD là a
     else
-        return (b, a % b);
+        return gcddequy(b, a % b); // Đệ quy với a là b và b là a % b
 }
 
+// Hàm tính GCD bằng thuật toán Euclid lặp
 int gcdeclip(int a, int b)
 {
     int r;
     while (b != 0)
     {
-        r = a % b;
-        a = b;
-        b = r;
+        r = a % b; // Tính dư
+        a = b;     // Cập nhật a thành b
+        b = r;     // Cập nhật b thành dư
     }
-    return a;
+    return a; // Trả về GCD
 }
 
+// Hàm tính LCM (Bội chung nhỏ nhất)
 int lcm(int a, int b)
 {
-    int bcnn;
-    bcnn = (a * b) / gcddequy(a, b);
-    return bcnn;
+    // Sử dụng công thức: LCM(a, b) = (a * b) / GCD(a, b)
+    return (a * b) / gcddequy(a, b);
 }
 
 int main()
 {
-    freopen("in.inp", "r", stdin);
-    freopen("out.out", "w", stdout);
-    cout << "De Quy: " << gcddequy(9, 6) << endl;
-    cout << "Eclip: " << gcdeclip(9, 6) << endl;
-    cout << lcm(9, 6);
+    freopen("in.inp", "r", stdin);   // Mở file đầu vào
+    freopen("out.out", "w", stdout); // Mở file đầu ra
+    int n, k;
+    cin >> n >> k;
+    cout << "De Quy: " << gcddequy(n, k) << endl; // Tính GCD bằng đệ quy
+    cout << "Eclip: " << gcdeclip(n, k) << endl;  // Tính GCD bằng lặp
+    cout << "Boi Chung: " << lcm(n, k);           // Tính LCM
 }

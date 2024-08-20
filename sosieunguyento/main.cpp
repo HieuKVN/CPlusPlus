@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
-
 #define nmax 1000000
 using namespace std;
 
 long long f[nmax];
-long long a, b, i;
 
 void sang(long long u)
 {
@@ -14,7 +12,7 @@ void sang(long long u)
         f[i] = 1;
     }
     f[0] = f[1] = 0;
-    for (i = 2; i * i <= u; i++)
+    for (long long i = 2; i * i <= u; i++)
     {
         if (f[i])
         {
@@ -24,27 +22,36 @@ void sang(long long u)
     }
 }
 
+// Hàm kiểm tra xem tất cả các chữ số của số u có phải là số nguyên tố không
 bool kitu(long long u)
 {
+    // Chữ số nguyên tố trong khoảng từ 0 đến 9
+    set<int> snt_digits = {2, 3, 5, 7};
+
     while (u > 0)
     {
-        int r = u % 10;
-        if (f[u])
-            return true;
-        u = u / 10;
+        int digit = u % 10;
+        if (snt_digits.find(digit) == snt_digits.end())
+            return false;
+        u /= 10;
     }
-    return false;
+    return true;
 }
 
 int main()
 {
     freopen("input.inp", "r", stdin);
     freopen("out.out", "w", stdout);
+
     sang(nmax);
+
+    long long a;
     cin >> a;
+
     if (kitu(a))
         cout << a << " la so sieu nguyen to!";
     else
         cout << a << " kp la so sieu nguyen to!";
+
     return 0;
 }

@@ -4,36 +4,28 @@ using namespace std;
 int main()
 {
     int n;
-    freopen("in.inp", "r", stdin);
-    freopen("out.out", "w", stdout);
+    freopen("in.inp", "r", stdin);   // Mở file đầu vào
+    freopen("out.out", "w", stdout); // Mở file đầu ra
     cin >> n;
 
     int a[n];
     for (int i = 0; i < n; i++)
     {
-        cin >> a[i];
+        cin >> a[i]; // Nhập từng phần tử của mảng a
     }
 
-    int dem = 0;
+    sort(a, a + n); // Sắp xếp mảng a theo thứ tự tăng dần
 
-    for (int i = 0; i < n; i++)
+    int dem = 1; // Biến đếm số lượng phần tử khác nhau, bắt đầu từ 1 vì ít nhất có 1 phần tử
+
+    for (int i = 1; i < n; i++)
     {
-        bool ktr = true;
-        for (int j = 0; j < i; j++)
+        if (a[i] != a[i - 1]) // Nếu phần tử hiện tại khác với phần tử trước đó
         {
-            if (a[i] == a[j])
-            {
-                ktr = false;
-                break;
-            }
-        }
-        if (ktr)
-        {
-
-            dem++;
+            dem++; // Tăng biến đếm
         }
     }
 
-    cout << dem;
+    cout << dem; // In ra số lượng phần tử khác nhau
     return 0;
 }
