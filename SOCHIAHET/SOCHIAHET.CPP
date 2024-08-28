@@ -17,8 +17,8 @@ bool check(int n)
 
 int main()
 {
-    freopen("in.inp", "r", stdin);   // Mở file đầu vào
-    freopen("out.out", "w", stdout); // Mở file đầu ra
+    freopen("SOCHIAHET.INP", "r", stdin);  // Mở file đầu vào
+    freopen("SOCHIAHET.OUT", "w", stdout); // Mở file đầu ra
 
     int n;
     cin >> n; // Đọc số lượng các số

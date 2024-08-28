@@ -3,8 +3,8 @@ using namespace std;
 
 int main()
 {
-    freopen("in.inp", "r", stdin);   // Mở file in.inp để đọc dữ liệu đầu vào
-    freopen("out.out", "w", stdout); // Mở file out.out để ghi kết quả đầu ra
+    freopen("PHANCHIA.INP", "r", stdin);  // Mở file in.inp để đọc dữ liệu đầu vào
+    freopen("PHANCHIA.OUT", "w", stdout); // Mở file out.out để ghi kết quả đầu ra
 
     int n;
     cin >> n;         // Nhập số lượng phần tử

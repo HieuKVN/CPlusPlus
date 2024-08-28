@@ -70,16 +70,6 @@ int main()
     // In hiệu số giữa hai nhóm
     cout << abs(s1 - s2) << endl;
 
-    // In các phần tử của nhóm đầu tiên
-    for (int i = 0; i < n; i++)
-    {
-        if (d[i + 1] == 1)
-        {
-            cout << a[i] << " ";
-        }
-    }
-    cout << endl;
-
     // In các phần tử của nhóm thứ hai
     for (int i = 0; i < n; i++)
     {
@@ -89,5 +79,15 @@ int main()
         }
     }
 
+    cout << endl;
+
+    // In các phần tử của nhóm đầu tiên
+    for (int i = 0; i < n; i++)
+    {
+        if (d[i + 1] == 1)
+        {
+            cout << a[i] << " ";
+        }
+    }
     return 0;
 }

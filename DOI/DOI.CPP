@@ -24,8 +24,8 @@ void xuly(int n, int k)
 
 int main()
 {
-    freopen("in.inp", "r", stdin);   // Mở file đầu vào để đọc dữ liệu
-    freopen("out.out", "w", stdout); // Mở file đầu ra để ghi kết quả
+    freopen("DOI.INP", "r", stdin);  // Mở file đầu vào để đọc dữ liệu
+    freopen("DOI.OUT", "w", stdout); // Mở file đầu ra để ghi kết quả
 
     int t;
     cin >> t; // Đọc số lượng test cases
