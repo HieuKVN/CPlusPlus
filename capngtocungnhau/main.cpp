@@ -1,3 +1,5 @@
+// Tóm tắt đề bài: Tìm các cặp số nguyên tố cùng nhau trong một mảng số nguyên.
+
 #include <bits/stdc++.h>
 using namespace std;
 

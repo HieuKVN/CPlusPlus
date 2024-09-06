@@ -1,3 +1,5 @@
+// Tóm tắt đề bài: Lập lịch cho các công việc để tối đa hóa lợi nhuận, mỗi công việc có thời gian bắt đầu, kết thúc và số tiền thu được.
+
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,3 +1,5 @@
+// Tóm tắt đề bài: Sinh tất cả các chỉnh hợp lặp chập k của n phần tử, trong đó các phần tử được cho trước.
+
 #include <bits/stdc++.h> // Thư viện chứa hầu hết các thư viện chuẩn của C++
 using namespace std;
 

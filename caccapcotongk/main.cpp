@@ -1,3 +1,5 @@
+// Tóm tắt đề bài: Tìm tất cả các cặp số trong một mảng có tổng bằng k.
+
 #include <bits/stdc++.h>
 using namespace std;
 

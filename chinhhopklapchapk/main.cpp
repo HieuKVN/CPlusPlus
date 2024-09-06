@@ -1,3 +1,5 @@
+// Tóm tắt đề bài: Sinh tất cả các chỉnh hợp không lặp chập k của n phần tử.
+
 #include <bits/stdc++.h>
 using namespace std;
 

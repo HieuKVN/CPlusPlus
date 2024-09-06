@@ -1,3 +1,5 @@
+// Tóm tắt đề bài: Tìm số nguyên tố đối xứng nhỏ nhất lớn hơn số n cho trước.
+
 #include <bits/stdc++.h>
 #define nmax 1000000
 using namespace std;

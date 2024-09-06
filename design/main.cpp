@@ -1,3 +1,5 @@
+// Tóm tắt đề bài: Sinh tất cả các tổ hợp nhị phân có độ dài n, thay đổi giá trị 0, 1 thành 'b', 'w' và đếm số lượng tổ hợp.
+
 #include <bits/stdc++.h>
 using namespace std;
 

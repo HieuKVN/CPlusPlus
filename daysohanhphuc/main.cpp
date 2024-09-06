@@ -1,3 +1,5 @@
+// Tóm tắt đề bài: Tìm và đếm các số hạnh phúc trong một khoảng cho trước.
+
 #include <bits/stdc++.h>
 #define nmax 1000000 // Định nghĩa kích thước tối đa của mảng sàng
 using namespace std;

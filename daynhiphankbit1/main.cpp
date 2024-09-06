@@ -1,3 +1,5 @@
+// Tóm tắt đề bài: Sinh tất cả các dãy nhị phân có độ dài n và chứa đúng k bit 1.
+
 #include <bits/stdc++.h>
 using namespace std;
 

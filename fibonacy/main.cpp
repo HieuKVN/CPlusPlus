@@ -1,3 +1,5 @@
+// Tóm tắt đề bài: Tính số Fibonacci thứ n sử dụng phương pháp lặp.
+
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,3 +1,5 @@
+// Tóm tắt đề bài: Sinh hoán vị và thực hiện các thao tác: 1) Tìm vị trí của một hoán vị cụ thể, 2) In ra hoán vị thứ k.
+
 #include <bits/stdc++.h>
 
 using namespace std;

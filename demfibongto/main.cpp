@@ -1,3 +1,4 @@
+// Tóm tắt đề bài: Đếm số lượng số Fibonacci là số nguyên tố trong khoảng từ 1 đến n.
 #include <bits/stdc++.h>
 #define nmax 10000
 using namespace std;

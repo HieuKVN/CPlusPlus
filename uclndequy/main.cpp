@@ -1,3 +1,5 @@
+// Tóm tắt đề bài: Tính ước chung lớn nhất (GCD) của hai số bằng phương pháp đệ quy và lặp, đồng thời tính bội chung nhỏ nhất (LCM).
+
 #include <bits/stdc++.h>
 
 using namespace std;

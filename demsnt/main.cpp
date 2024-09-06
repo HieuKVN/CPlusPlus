@@ -1,3 +1,5 @@
+// Tóm tắt đề bài: Đếm số lượng số nguyên tố trong khoảng từ a đến b sử dụng phương pháp sàng Eratosthenes.
+
 #include <bits/stdc++.h>
 #define nmax 1000000
 using namespace std;

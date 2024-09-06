@@ -1,3 +1,5 @@
+// Tóm tắt đề bài: Liệt kê tất cả các số nguyên tố từ 1 đến n sử dụng phương pháp sàng Eratosthenes.
+
 #include <bits/stdc++.h>
 #define nmax 1000000
 using namespace std;

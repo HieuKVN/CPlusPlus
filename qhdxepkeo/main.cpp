@@ -1,3 +1,5 @@
+// Tóm tắt đề bài: Chia một tập hợp các số thành hai nhóm sao cho hiệu giữa tổng của hai nhóm là nhỏ nhất, sử dụng phương pháp quy hoạch động.
+
 #include <bits/stdc++.h>
 using namespace std;
 
