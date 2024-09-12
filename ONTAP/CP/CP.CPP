@@ -25,7 +25,7 @@ bool cp(int n)
     return res * res == n;
 }
 
-bool dpdb(int n)
+bool cpdb(int n)
 {
     if (cp(n))
     {
