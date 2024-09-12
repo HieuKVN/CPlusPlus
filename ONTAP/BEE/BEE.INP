@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// Hàm kiểm tra xem một số có phải là số chính phương không
+bool laSoChinhPhuong(int n) {
+    int s = sqrt(n);
+    return s * s == n;
+}
+
+// Hàm kiểm tra xem một số có phải là số Fibonacci không
+bool kiemTraSoFibonacci(int x) {
+    if (x < 0) return false;
+    
+    // Dùng thuộc tính: Một số là số Fibonacci nếu và chỉ nếu một hoặc cả hai (5*n^2 + 4) hoặc (5*n^2 - 4) là số chính phương
+    return laSoChinhPhuong(5 * x * x + 4) || laSoChinhPhuong(5 * x * x - 4);
+}
+
+int main() {
+    int K;
+    cin >> K;
+
+    if (kiemTraSoFibonacci(K)) {
+        cout << K << " là số Fibonacci." << endl;
+    } else {
+        cout << K << " không phải là số Fibonacci." << endl;
+    }
+    
+    return 0;
+}

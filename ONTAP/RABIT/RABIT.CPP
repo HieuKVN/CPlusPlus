@@ -15,7 +15,8 @@ int main()
         {
             f[i] = f[i - 1] + f[i - 2];
         }
-        cout << i << ":" << f[i] << " ";
+        cout << i << ":" << f[i] << " " << endl;
     }
+    cout << "Tong so doi tho sau " << n << " thang: " << f[n];
     return 0;
 }

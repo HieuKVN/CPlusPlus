@@ -19,7 +19,6 @@ void xuly1()
         }
     }
     cout << d << endl; // In ra số hoán vị đạt yêu cầu
-    return;
 }
 
 // Hàm kiểm tra số lượng hoán vị
@@ -33,16 +32,8 @@ void xuly2()
             cout << a[i] << " "; // In ra hoán vị thứ k
         }
         cout << endl;
-        return;
+        exit(0); // Kết thúc chương trình sau khi tìm thấy hoán vị thứ k
     }
-}
-
-// Hàm in hoán vị hiện tại
-void xuat()
-{
-    for (int i = 1; i <= n; i++)
-        cout << a[i] << " ";
-    cout << endl;
 }
 
 // Hàm sinh các hoán vị
@@ -56,7 +47,8 @@ void Try(int i)
             f[j] = 1; // Đánh dấu giá trị j đã được sử dụng
             if (i == n)
             {
-                xuly2(); // Nếu đã tạo được hoán vị đầy đủ, kiểm tra và xuất kết quả
+                xuly1(); // Kiểm tra hoán vị với dãy b
+                xuly2(); // Kiểm tra số lượng hoán vị
             }
             else
                 Try(i + 1); // Tiếp tục sinh hoán vị cho vị trí tiếp theo
