@@ -1,34 +1,49 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define Nmax 300
 
-#define Nmax 1000009
 int a[Nmax];
-int n, k;
-int d = 0;
+int b[Nmax];
+int n, k, S;
+int cnt = 0;
 
 void xuat()
 {
-    for (int i = 1; i <= k; ++i)
+    cnt++;
+    if (cnt == S)
     {
-        cout << a[i] << " ";
+        for (int i = 1; i <= k; ++i)
+        {
+            cout << a[i] << " ";
+        }
+        cout << endl;
     }
-    cout << endl;
 }
 
-void Try(int i, int u)
+void Try(int i)
 {
-    for (int j = u; j <= n; ++j)
+    for (int j = a[i - 1] + 1; j <= n - k + i; j++)
     {
         a[i] = j;
         if (i == k)
         {
             xuat();
         }
-        else if (i < k)
+        else
         {
-            Try(i + 1, j + 1);
+            Try(i + 1);
         }
     }
+}
+
+int tim_so_hieu()
+{
+    int so_hieu = 0;
+    for (int i = 1; i <= k; i++)
+    {
+        so_hieu += b[i] - i;
+    }
+    return so_hieu + 1;
 }
 
 int main()
@@ -36,12 +51,15 @@ int main()
     freopen("DQQL_BAI6.INP", "r", stdin);
     freopen("DQQL_BAI6.OUT", "w", stdout);
 
-    cin >> n >> k;
-    cin >> s;
-    for (i = 0; i <= s; i++)
+    cin >> n >> k >> S;
+    for (int i = 1; i <= k; i++)
     {
-        cin >> a[i];
+        cin >> b[i];
     }
+
+    Try(1);
+
+    cout << tim_so_hieu() << endl;
 
     return 0;
 }

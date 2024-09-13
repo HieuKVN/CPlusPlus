@@ -4,19 +4,14 @@ using namespace std;
 // Hàm kiểm tra xem số có chứa cả chữ số 6 và 8 hay không
 bool ktr(int num)
 {
-    bool has6 = false, has8 = false;
-
     while (num > 0)
     {
         int digit = num % 10;
-        if (digit == 6)
-            has6 = true;
-        if (digit == 8)
-            has8 = true;
+        if (digit != 6 && digit != 8)
+            return false;
         num /= 10;
     }
-
-    return (has6 && has8);
+    return true;
 }
 
 int main()
