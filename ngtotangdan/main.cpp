@@ -9,11 +9,13 @@ long long a, b, i;
 bool snt(int n)
 {
 	if (n < 2)
-		return false; // Số nhỏ hơn 2 không phải là số nguyên tố
-	for (int i = 2; i <= n / 2; i++)
+		return false;
+	for (int i = 2; i <= sqrt(n); i++)
+	{
 		if (n % i == 0)
-			return false; // Nếu có bội số khác ngoài 1 và chính nó, không phải là số nguyên tố
-	return true;		  // Ngược lại là số nguyên tố
+			return false;
+	}
+	return true;
 }
 
 // Hàm đánh dấu các số nguyên tố trong khoảng từ 0 đến u
