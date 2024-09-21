@@ -2,12 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int a[1000];
-int f[1000] = {0};
-int b[1000];
-int n, k, x;
-int d1 = 0;
-int d2 = 0;
+int a[1000], f[1000] = {0}, b[1000], n, k, x, d1 = 0, d2 = 0;
 
 void xuly1()
 {
@@ -33,13 +28,6 @@ void xuly2()
         cout << endl;
         return;
     }
-}
-
-void xuat()
-{
-    for (int i = 1; i <= n; i++)
-        cout << a[i] << " ";
-    cout << endl;
 }
 
 void Try1(int i)

@@ -28,7 +28,7 @@ int main()
     vector<cv> a(n); // Vector lưu các công việc
 
     // Nhập thông tin về các công việc
-    for (int i = 0; i < n; ++i)
+    for (int i = 0; i <= n; ++i)
     {
         cin >> a[i].batdau >> a[i].ketthuc >> a[i].tien;
         a[i].id = i + 1; // Đánh số ID cho từng công việc
