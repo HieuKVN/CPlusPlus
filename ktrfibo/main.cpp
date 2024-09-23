@@ -11,28 +11,26 @@ bool fibo(long long n)
     // Các số 1 và 2 đều là số Fibonacci
     if (n == 1 || n == 2)
         return true;
-    else
+
+    // Khởi tạo các số Fibonacci đầu tiên
+    f1 = 1;
+    f2 = 1;
+    fn = f1 + f2; // fn là số Fibonacci thứ 3
+    i = 3;
+
+    // Tính các số Fibonacci cho đến khi số hiện tại lớn hơn hoặc bằng n
+    while (fn < n)
     {
-        // Khởi tạo các số Fibonacci đầu tiên
-        f1 = 1;
-        f2 = 1;
-        fn = f1 + f2; // fn là số Fibonacci thứ 3
-        i = 3;
-
-        // Tính các số Fibonacci cho đến khi số hiện tại lớn hơn hoặc bằng n
-        while (fn < n)
-        {
-            f1 = f2; // Cập nhật f1 và f2
-            f2 = fn;
-            fn = f1 + f2; // Cập nhật số Fibonacci tiếp theo
-        }
-
-        // Kiểm tra xem số n có phải là số Fibonacci không
-        if (fn == n)
-            return true;
-        else
-            return false;
+        f1 = f2; // Cập nhật f1 và f2
+        f2 = fn;
+        fn = f1 + f2; // Cập nhật số Fibonacci tiếp theo
     }
+
+    // Kiểm tra xem số n có phải là số Fibonacci không
+    if (fn == n)
+        return true;
+    else
+        return false;
 }
 
 int main()

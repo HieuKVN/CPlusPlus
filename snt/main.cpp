@@ -28,8 +28,8 @@ void sang(long long u)
 
 int main()
 {
-	freopen("in.inp", "r", stdin);	// Mở file đầu vào để đọc dữ liệu
-	freopen("in.out", "w", stdout); // Mở file đầu ra để ghi kết quả
+	freopen("in.inp", "r", stdin);	 // Mở file đầu vào để đọc dữ liệu
+	freopen("out.out", "w", stdout); // Mở file đầu ra để ghi kết quả
 
 	sang(nmax); // Tính toán và đánh dấu các số nguyên tố đến nmax
 

@@ -18,7 +18,7 @@ int main()
 
     int dem = 1; // Biến đếm số lượng phần tử khác nhau, bắt đầu từ 1 vì ít nhất có 1 phần tử
 
-    for (int i = 1; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
         if (a[i] != a[i - 1]) // Nếu phần tử hiện tại khác với phần tử trước đó
         {

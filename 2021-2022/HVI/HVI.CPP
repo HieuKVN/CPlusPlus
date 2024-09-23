@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -13,7 +12,6 @@ void xuly1()
             return;
     }
     cout << d1 << endl;
-    return;
 }
 
 void xuly2()
@@ -26,28 +24,10 @@ void xuly2()
             cout << a[i] << " ";
         }
         cout << endl;
-        return;
     }
 }
 
-void Try1(int i)
-{
-    for (int j = 1; j <= n; j++)
-        if (f[j] == 0)
-        {
-            a[i] = j;
-            f[j] = 1;
-            if (i == n)
-            {
-                xuly1();
-            }
-            else
-                Try1(i + 1);
-            f[j] = 0;
-        }
-}
-
-void Try2(int i)
+void Try(int i)
 {
     for (int j = 1; j <= n; j++)
     {
@@ -57,10 +37,13 @@ void Try2(int i)
             f[j] = 1;
             if (i == n)
             {
+                xuly1();
                 xuly2();
             }
             else
-                Try2(i + 1);
+            {
+                Try(i + 1);
+            }
             f[j] = 0;
         }
     }
@@ -76,7 +59,6 @@ int main()
         b[++n] = x;
     }
     k = b[n];
-
     n--;
 
     for (int i = 1; i <= n; i++)
@@ -84,8 +66,7 @@ int main()
         cin >> a[i];
     }
 
-    Try1(1);
-    Try2(1);
+    Try(1);
 
     return 0;
 }

@@ -2,7 +2,7 @@
 #define nmax 1000000 // Giới hạn tối đa cho sàng Eratosthenes
 using namespace std;
 
-long long f[nmax + 1]; // Mảng đánh dấu các số nguyên tố
+long long f[nmax]; // Mảng đánh dấu các số nguyên tố
 
 // Hàm Sàng Eratosthenes để đánh dấu các số nguyên tố
 void sang(long long u)

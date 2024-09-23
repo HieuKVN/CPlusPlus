@@ -21,7 +21,7 @@ int main()
 
     int dem = 1;
 
-    for (int i = 1; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
         if (a[i] == a[i - 1])
         {

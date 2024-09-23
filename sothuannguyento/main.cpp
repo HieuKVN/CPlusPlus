@@ -52,6 +52,8 @@ int main()
     // Không cần freopen nếu không đọc/ghi từ file
     sang(nmax); // Khởi tạo mảng f để tìm số nguyên tố
 
+    freopen("in.inp", "r", stdin);
+    freopen("out.out", "w", stdout);
     int b, c;
     cin >> b >> c;
 

@@ -13,7 +13,7 @@ void sang(long long u)
 		f[i] = 1; // Giả sử tất cả các số đều là số nguyên tố
 	}
 	f[0] = f[1] = 0; // 0 và 1 không phải là số nguyên tố
-	for (i = 2; i * i <= u; i++)
+	for (int i = 2; i * i <= u; i++)
 	{
 		if (f[i]) // Nếu i là số nguyên tố
 		{

@@ -2,7 +2,7 @@
 #define nmax 1000000 // Giới hạn tối đa cho các số cần kiểm tra
 using namespace std;
 
-long long f[nmax + 1]; // Mảng đánh dấu số nguyên tố
+long long f[nmax]; // Mảng đánh dấu số nguyên tố
 
 // Hàm Sàng Eratosthenes để đánh dấu số nguyên tố
 void sang(long long u)

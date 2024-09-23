@@ -2,7 +2,7 @@
 #define nmax 1000000 // Định nghĩa giới hạn tối đa cho mảng sàng
 using namespace std;
 
-bool f[nmax]; // Mảng lưu trạng thái số nguyên tố, dùng bool để tiết kiệm bộ nhớ
+long long f[nmax]; // Mảng lưu trạng thái số nguyên tố, dùng bool để tiết kiệm bộ nhớ
 long long a, b, n, i;
 
 // Hàm sàng Eratosthenes để tìm các số nguyên tố từ 2 đến u

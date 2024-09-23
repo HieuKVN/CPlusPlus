@@ -2,7 +2,7 @@
 #define nmax 1000000
 using namespace std;
 
-long long f[nmax + 1];
+long long f[nmax];
 
 void sang(long long u)
 {

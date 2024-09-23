@@ -3,7 +3,7 @@
 #define nmax 10000
 using namespace std;
 
-bool f[nmax]; // Mảng đánh dấu số nguyên tố
+long long f[nmax]; // Mảng đánh dấu số nguyên tố
 
 // Hàm sàng Eratosthenes để tính số nguyên tố
 void sang(long long u)

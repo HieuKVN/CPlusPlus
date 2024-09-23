@@ -18,7 +18,7 @@ int main()
     }
 
     // Nhập chi phí để di chuyển giữa các bước liên tiếp
-    for (int i = 1; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
         cin >> r[i];
     }
