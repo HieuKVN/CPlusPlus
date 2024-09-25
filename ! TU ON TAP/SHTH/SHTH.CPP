@@ -1,11 +1,9 @@
 #include <bits/stdc++.h>
 #define nmax 1000000
 using namespace std;
-
 int n, x, i, k, a[nmax], b[nmax];
 int f[nmax] = {0};
 int d1 = 0, d2 = 0;
-
 void xuly1()
 {
     d1++;
@@ -18,7 +16,6 @@ void xuly1()
     }
     cout << d1 << endl;
 }
-
 void xuly2()
 {
     d2++;
@@ -31,7 +28,6 @@ void xuly2()
         cout << endl;
     }
 }
-
 void Try(int i)
 {
     for (int j = 1; j <= n; j++)
@@ -51,7 +47,6 @@ void Try(int i)
         }
     }
 }
-
 int main()
 {
     freopen("SHTH.INP", "r", stdin);
@@ -62,12 +57,10 @@ int main()
     }
     k = b[n];
     n--;
-
     for (int i = 1; i <= n; i++)
     {
         cin >> a[i];
     }
-
     Try(1);
     return 0;
 }

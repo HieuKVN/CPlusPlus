@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 long long fibo(long long n)
 {
     long long f1, f2, fn;
@@ -15,7 +14,6 @@ long long fibo(long long n)
     }
     return fn;
 }
-
 int main()
 {
     freopen("DAYFIBO.INP", "r", stdin);

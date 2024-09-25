@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 bool fibo(int n)
 {
     long long f1, f2, fn;
@@ -17,16 +16,12 @@ bool fibo(int n)
     else
         return false;
 }
-
 int main()
 {
     freopen("KTRFIBO.INP", "r", stdin);
     freopen("KTRFIBO.OUT", "w", stdout);
-
     int n;
-
     cin >> n;
-
     if (fibo(n))
         cout << "YES";
     else
