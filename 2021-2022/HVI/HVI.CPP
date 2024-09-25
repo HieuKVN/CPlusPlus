@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int a[1000], f[1000] = {0}, b[1000], n, k, x, d1 = 0, d2 = 0;
-
 void xuly1()
 {
     d1++;
@@ -13,7 +11,6 @@ void xuly1()
     }
     cout << d1 << endl;
 }
-
 void xuly2()
 {
     d2++;
@@ -26,7 +23,6 @@ void xuly2()
         cout << endl;
     }
 }
-
 void Try(int i)
 {
     for (int j = 1; j <= n; j++)
@@ -48,25 +44,20 @@ void Try(int i)
         }
     }
 }
-
 int main()
 {
     freopen("HVI.INP", "r", stdin);
     freopen("HVI.OUT", "w", stdout);
-
     while (cin >> x)
     {
         b[++n] = x;
     }
     k = b[n];
     n--;
-
     for (int i = 1; i <= n; i++)
     {
         cin >> a[i];
     }
-
     Try(1);
-
     return 0;
 }
