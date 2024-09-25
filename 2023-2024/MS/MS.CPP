@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int demUoc(int n)
 {
     int d = 0;
@@ -20,7 +19,6 @@ int demUoc(int n)
     }
     return d;
 }
-
 int main()
 {
     freopen("MS.INP", "r", stdin);
@@ -32,7 +30,6 @@ int main()
     {
         i++;
     }
-
     cout << i << endl;
     return 0;
 }

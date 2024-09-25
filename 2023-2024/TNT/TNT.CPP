@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 bool snt(int n)
 {
     if (n < 2)
@@ -16,7 +15,6 @@ bool snt(int n)
     }
     return true;
 }
-
 int main()
 {
     freopen("TNT.INP", "r", stdin);
@@ -36,8 +34,6 @@ int main()
             s = s + a[i];
         }
     }
-
     cout << "Tong cac so nguyen to trong day: " << s;
-
     return 0;
 }
