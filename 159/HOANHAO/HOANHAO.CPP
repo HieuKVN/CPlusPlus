@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int tonguoc(int n)
 {
     int sum = 0;
@@ -13,12 +12,10 @@ int tonguoc(int n)
     }
     return sum;
 }
-
 int main()
 {
     freopen("HOANHAO.INP", "r", stdin);
     freopen("HOANHAO.OUT", "w", stdout);
-
     int n;
     cin >> n;
     int a[n];
@@ -35,8 +32,6 @@ int main()
             cout << a[i] << " ";
         }
     }
-
     cout << endl;
-
     return 0;
 }
