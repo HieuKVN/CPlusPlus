@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 bool snt(int n)
 {
     if (n < 2)
@@ -12,7 +11,6 @@ bool snt(int n)
     }
     return true;
 }
-
 bool cp(int n)
 {
     if (n < 1)
@@ -20,7 +18,6 @@ bool cp(int n)
     int res = sqrt(n);
     return res * res == n;
 }
-
 bool cpdb(int n)
 {
     if (cp(n))
@@ -30,15 +27,12 @@ bool cpdb(int n)
     }
     return false;
 }
-
 int main()
 {
     freopen("CP.INP", "r", stdin);
     freopen("CP.OUT", "w", stdout);
-
     int n, k;
     cin >> n >> k;
-
     int d = 0;
     for (int i = n; i <= k; i++)
     {
@@ -47,7 +41,6 @@ int main()
             d++;
         }
     }
-
     cout << d;
     return 0;
 }

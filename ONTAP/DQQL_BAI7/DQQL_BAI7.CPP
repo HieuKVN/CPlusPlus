@@ -1,14 +1,11 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-
 int a[1000];
 int f[1000] = {0};
 int b[1000];
 int n, k, x;
 int d1 = 0;
 int d2 = 0;
-
 void Xuly1()
 {
     d1++;
@@ -20,7 +17,6 @@ void Xuly1()
     cout << d1 << endl;
     return;
 }
-
 void Xuly2()
 {
     d2++;
@@ -34,7 +30,6 @@ void Xuly2()
         return;
     }
 }
-
 void Try1(int i)
 {
     for (int j = 1; j <= n; j++)
@@ -51,7 +46,6 @@ void Try1(int i)
             f[j] = 0;
         }
 }
-
 void Try2(int i)
 {
     for (int j = 1; j <= n; j++)
@@ -70,27 +64,21 @@ void Try2(int i)
         }
     }
 }
-
 int main()
 {
     freopen("DQQL_BAI7.INP", "r", stdin);
     freopen("DQQL_BAI7.OUT", "w", stdout);
-
     while (cin >> x)
     {
         b[++n] = x;
     }
     k = b[n];
-
     n--;
-
     for (int i = 1; i <= n; i++)
     {
         cin >> a[i];
     }
-
     Try1(1);
     Try2(1);
-
     return 0;
 }

@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 void check(int n)
 {
     while (n % 2 == 0)
@@ -8,7 +7,6 @@ void check(int n)
         cout << 2 << " ";
         n /= 2;
     }
-
     for (int i = 3; i * i <= n; i += 2)
     {
         while (n % i == 0)
@@ -17,22 +15,17 @@ void check(int n)
             n /= i;
         }
     }
-
     if (n > 2)
     {
         cout << n << " ";
     }
 }
-
 int main()
 {
     int n;
     freopen("THUASONGUYENTO.INP", "r", stdin);
     freopen("THUASONGUYENTO.OUT", "w", stdout);
-
     cin >> n;
-
     check(n);
-
     return 0;
 }

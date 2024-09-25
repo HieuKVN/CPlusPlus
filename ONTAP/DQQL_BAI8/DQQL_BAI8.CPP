@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 const int Nmax = 1000009;
 int a[Nmax];
 int n, d = 0;
-
 void Xuat()
 {
     for (int i = 1; i <= n; ++i)
@@ -13,7 +11,6 @@ void Xuat()
     }
     cout << endl;
 }
-
 void Try(int i)
 {
     for (int j = 0; j <= 1; ++j)
@@ -30,7 +27,6 @@ void Try(int i)
         }
     }
 }
-
 int main()
 {
     freopen("DQQL_BAI8.INP", "r", stdin);

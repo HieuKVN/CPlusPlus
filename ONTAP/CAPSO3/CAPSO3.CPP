@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 bool snt(int n)
 {
     if (n < 2)
@@ -12,23 +11,18 @@ bool snt(int n)
     }
     return true;
 }
-
 int main()
 {
     freopen("CAPSO3.INP", "r", stdin);
     freopen("CAPSO3.OUT", "w", stdout);
-
     int n;
     cin >> n;
-
     vector<int> a(n);
     for (int i = 0; i < n; ++i)
     {
         cin >> a[i];
     }
-
     int d = 0;
-
     for (int l = 0; l < n - 1; ++l)
     {
         for (int r = l + 1; r < n; ++r)
@@ -40,8 +34,6 @@ int main()
             }
         }
     }
-
     cout << d;
-
     return 0;
 }

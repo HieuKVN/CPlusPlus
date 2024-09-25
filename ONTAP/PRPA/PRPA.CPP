@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
 #define nmax 1000000
 using namespace std;
-
 long long f[nmax];
-
 void sang(long long u)
 {
     long long j;
@@ -21,7 +19,6 @@ void sang(long long u)
         }
     }
 }
-
 int dn(int n)
 {
     int kq = 0;
@@ -32,18 +29,14 @@ int dn(int n)
     }
     return kq;
 }
-
 int main()
 {
     sang(nmax);
-
     freopen("PRPA.INP", "r", stdin);
     freopen("PRPA.OUT", "w", stdout);
     int n;
-
     cin >> n;
     int m = n + 1;
-
     while (m <= nmax)
     {
         if (f[m] && (dn(m) == m))

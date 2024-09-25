@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
 #define nmax 1000000
 using namespace std;
-
 long long f[nmax];
-
 void sang(long long u)
 {
     long long j;
@@ -21,7 +19,6 @@ void sang(long long u)
         }
     }
 }
-
 int main()
 {
     sang(nmax);

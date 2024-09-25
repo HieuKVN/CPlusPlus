@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
     freopen("UOCSO.INP", "r", stdin);
@@ -12,7 +11,6 @@ int main()
         int n, m, d;
         cin >> n >> m;
         int a = n * m;
-
         for (int i = 1; i <= a; i++)
         {
             if (a % i == 0)

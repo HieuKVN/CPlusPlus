@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 long long n;
-
 bool snt(int n)
 {
     if (n < 2)
@@ -14,24 +12,19 @@ bool snt(int n)
     }
     return true;
 }
-
 bool fibo(long long n)
 {
     if (n <= 0)
         return false;
-
     long long f1 = 0, f2 = 1, fn = f1 + f2;
-
     while (fn < n)
     {
         f1 = f2;
         f2 = fn;
         fn = f1 + f2;
     }
-
     return fn == n;
 }
-
 int main()
 {
     freopen("NTFIBO.INP", "r", stdin);

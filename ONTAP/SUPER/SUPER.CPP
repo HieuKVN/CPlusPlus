@@ -1,18 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 bool snt(int n)
 {
-	if (n < 2)
-		return false;
-	for (int i = 2; i <= sqrt(n); i++)
-	{
-		if (n % i == 0)
-			return false;
-	}
-	return true;
+    if (n < 2)
+        return false;
+    for (int i = 2; i <= sqrt(n); i++)
+    {
+        if (n % i == 0)
+            return false;
+    }
+    return true;
 }
-
 bool ktr(int n)
 {
     if (!snt[n])
@@ -25,7 +23,6 @@ bool ktr(int n)
     }
     return true;
 }
-
 int main()
 {
     freopen("SUPER.INP", "r", stdin);
@@ -39,6 +36,5 @@ int main()
             cout << i << endl;
         }
     }
-
     return 0;
 }

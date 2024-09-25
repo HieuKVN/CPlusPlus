@@ -1,12 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 #define Nmax 1000009
-
 int a[Nmax];
 int f[Nmax] = {0};
 int n;
-
 void xuat()
 {
     for (int i = 1; i <= n; ++i)
@@ -15,7 +12,6 @@ void xuat()
     }
     cout << endl;
 }
-
 void Try(int i)
 {
     for (int j = 1; j <= n; ++j)
@@ -36,14 +32,11 @@ void Try(int i)
         }
     }
 }
-
 int main()
 {
     freopen("DQQL_BAI1.INP", "r", stdin);
     freopen("DQQL_BAI1.OUT", "w", stdout);
-
     cin >> n;
     Try(1);
-
     return 0;
 }
