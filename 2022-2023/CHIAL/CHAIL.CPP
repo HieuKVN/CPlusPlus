@@ -1,11 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define Nmax 300
-
 int a[Nmax];
 int n, k;
 int d = 0;
-
 void Try(int i)
 {
     for (int j = a[i - 1] + 1; j <= n - k + i; j++)
@@ -21,7 +19,6 @@ void Try(int i)
         }
     }
 }
-
 int main()
 {
     freopen("CHIAL.INP", "r", stdin);
