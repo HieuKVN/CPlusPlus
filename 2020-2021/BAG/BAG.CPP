@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
 #define nmax 10000
 using namespace std;
-
 int w[nmax], v[nmax], n, m;
-
 void xuly()
 {
     int i, j;
@@ -21,7 +19,6 @@ void xuly()
         }
     }
     cout << dp[n][m] << endl;
-
     int s = 0;
     while (n != 0)
     {
@@ -36,7 +33,6 @@ void xuly()
     cout << endl;
     cout << s;
 }
-
 int main()
 {
     freopen("BAG.INP", "r", stdin);
@@ -48,6 +44,5 @@ int main()
         cin >> w[i] >> v[i];
     }
     xuly();
-
     return 0;
 }

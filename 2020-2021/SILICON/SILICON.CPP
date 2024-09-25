@@ -1,11 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define Nmax 1000009
-
 int a[Nmax];
 int n, m;
 int d = 0;
-
 void xuat()
 {
     d++;
@@ -18,7 +16,6 @@ void xuat()
     }
     cout << "}" << endl;
 }
-
 void Try(int i)
 {
     for (int j = a[i - 1] + 1; j <= n - m + i; j++)
@@ -30,7 +27,6 @@ void Try(int i)
             Try(i + 1);
     }
 }
-
 int main()
 {
     freopen("SILICON.INP", "r", stdin);
