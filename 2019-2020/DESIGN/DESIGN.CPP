@@ -1,14 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int a[100];
 int n, d = 0;
-
 void xuat()
 {
     for (int i = 1; i <= n; i++)
     {
-
         if (a[i] == 1)
             cout << 'w' << " ";
         else
@@ -16,7 +13,6 @@ void xuat()
     }
     cout << endl;
 }
-
 void Try(int i)
 {
     for (int j = 0; j <= 1; j++)
@@ -33,7 +29,6 @@ void Try(int i)
         }
     }
 }
-
 int main()
 {
     freopen("DESIGN.INP", "r", stdin);
