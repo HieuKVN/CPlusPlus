@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
 #define nmax 1000000
 using namespace std;
-
 long long f[nmax]; // Mảng lưu giá trị xác định số nguyên tố
-
 void sang(long long u)
 {
 	long long j;
@@ -21,20 +19,15 @@ void sang(long long u)
 		}
 	}
 }
-
 int main()
 {
 	freopen("in.inp", "r", stdin);	 // Mở file đầu vào để đọc dữ liệu
 	freopen("out.out", "w", stdout); // Mở file đầu ra để ghi kết quả
-
-	sang(nmax); // Tính toán và đánh dấu các số nguyên tố đến nmax
-
+	sang(nmax);						 // Tính toán và đánh dấu các số nguyên tố đến nmax
 	long long a;
 	cin >> a;
-
 	int dem = 0;	 // Khởi tạo biến đếm số lượng số nguyên tố
 	long long i = 2; // Bắt đầu kiểm tra từ số 2
-
 	while (dem < a)
 	{
 		if (f[i])
@@ -44,6 +37,5 @@ int main()
 		}
 		i++;
 	}
-
 	return 0;
 }

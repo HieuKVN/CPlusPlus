@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int a[100]; // Mảng lưu trữ các giá trị 0 hoặc 1
 int n;      // Số lượng phần tử cần tạo
 int d = 0;  // Biến đếm số lượng chuỗi nhị phân tạo được
-
 // Hàm xuất chuỗi nhị phân hiện tại
 void xuat()
 {
@@ -12,7 +10,6 @@ void xuat()
         cout << a[i] << " "; // In các phần tử của chuỗi
     cout << endl;            // Xuống dòng sau khi in chuỗi
 }
-
 // Hàm đệ quy để tạo tất cả các chuỗi nhị phân có độ dài n
 void Try(int i)
 {
@@ -30,7 +27,6 @@ void Try(int i)
         }
     }
 }
-
 int main()
 {
     freopen("in.inp", "r", stdin);   // Mở file đầu vào để đọc dữ liệu

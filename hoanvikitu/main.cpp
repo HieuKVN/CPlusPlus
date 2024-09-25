@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int a[1000];       // Mảng lưu chỉ số của ký tự trong chuỗi k
 int f[1000] = {0}; // Mảng đánh dấu đã sử dụng ký tự tại chỉ số tương ứng
 string k;          // Chuỗi đầu vào
-
 // Hàm in hoán vị hiện tại
 void xuat()
 {
@@ -14,7 +12,6 @@ void xuat()
     }
     cout << endl;
 }
-
 // Hàm sinh hoán vị
 void Try(int i)
 {
@@ -36,13 +33,11 @@ void Try(int i)
         }
     }
 }
-
 int main()
 {
     freopen("in.inp", "r", stdin);   // Mở file đầu vào để đọc dữ liệu
     freopen("out.out", "w", stdout); // Mở file đầu ra để ghi kết quả
-
-    cin >> k; // Đọc chuỗi k từ đầu vào
-    Try(1);   // Bắt đầu sinh hoán vị từ chỉ số 1
+    cin >> k;                        // Đọc chuỗi k từ đầu vào
+    Try(1);                          // Bắt đầu sinh hoán vị từ chỉ số 1
     return 0;
 }

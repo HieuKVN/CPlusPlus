@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 // Hàm đảo ngược số
 int dn(int n)
 {
@@ -12,27 +11,22 @@ int dn(int n)
     }
     return kq;
 }
-
 // Hàm kiểm tra số đối xứng
 bool dx(int n)
 {
     return dn(n) == n;
 }
-
 int main()
 {
     int n;
     freopen("in.inp", "r", stdin);
     freopen("out.out", "w", stdout);
-
     cin >> n;
     int a[n];
-
     for (int i = 0; i < n; i++)
     {
         cin >> a[i];
     }
-
     // In các số đối xứng
     for (int i = 0; i < n; i++)
     {
@@ -41,6 +35,5 @@ int main()
             cout << a[i] << " ";
         }
     }
-
     return 0;
 }

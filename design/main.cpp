@@ -1,12 +1,9 @@
 // Tóm tắt đề bài: Sinh tất cả các tổ hợp nhị phân có độ dài n, thay đổi giá trị 0, 1 thành 'b', 'w' và đếm số lượng tổ hợp.
-
 #include <bits/stdc++.h>
 using namespace std;
-
 int a[100]; // Mảng lưu các giá trị nhị phân
 int n;      // Độ dài của tổ hợp
 int d = 0;  // Biến đếm số lượng tổ hợp
-
 // Hàm xuất tổ hợp và thay đổi giá trị 0, 1 thành 'b', 'w'
 void xuat()
 {
@@ -20,7 +17,6 @@ void xuat()
     }
     cout << endl;
 }
-
 // Hàm đệ quy sinh các tổ hợp nhị phân
 void Try(int i)
 {
@@ -38,7 +34,6 @@ void Try(int i)
         }
     }
 }
-
 int main()
 {
     freopen("in.inp", "r", stdin);   // Mở file đầu vào

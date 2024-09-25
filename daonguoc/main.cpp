@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
 #define nmax 1000000 // Định nghĩa giới hạn tối đa cho mảng sàng
 using namespace std;
-
 long long f[nmax]; // Mảng lưu trạng thái số nguyên tố, dùng bool để tiết kiệm bộ nhớ
 long long a, b, n, i;
-
 // Hàm sàng Eratosthenes để tìm các số nguyên tố từ 2 đến u
 void sang(long long u)
 {
@@ -14,7 +12,6 @@ void sang(long long u)
 		f[i] = true;
 	}
 	f[0] = f[1] = false; // 0 và 1 không phải là số nguyên tố
-
 	// Thực hiện sàng Eratosthenes
 	for (i = 2; i * i <= u; i++) // Chỉ cần sàng đến căn bậc hai của u
 	{
@@ -25,7 +22,6 @@ void sang(long long u)
 		}
 	}
 }
-
 // Hàm đảo ngược số n
 int pt(int n)
 {
@@ -38,22 +34,17 @@ int pt(int n)
 	}
 	return res; // Trả về số đã đảo ngược
 }
-
 int main()
 {
 	freopen("in.inp", "r", stdin);	 // Mở file đầu vào
 	freopen("out.out", "w", stdout); // Mở file đầu ra
-
-	sang(nmax); // Sàng nguyên tố đến giới hạn nmax
-
-	cin >> a >> b; // Nhập khoảng a và b
-
-	for (i = a; i <= b; i++) // Duyệt qua tất cả các số từ a đến b
+	sang(nmax);						 // Sàng nguyên tố đến giới hạn nmax
+	cin >> a >> b;					 // Nhập khoảng a và b
+	for (i = a; i <= b; i++)		 // Duyệt qua tất cả các số từ a đến b
 	{
 		// Kiểm tra nếu số i khi đảo ngược vẫn là số nguyên tố
 		if (f[pt(i)])
 			cout << i << " "; // In ra số thỏa mãn điều kiện
 	}
-
 	return 0;
 }

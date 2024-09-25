@@ -1,12 +1,9 @@
 // Tóm tắt đề bài: Sinh tất cả các chỉnh hợp không lặp chập k của n phần tử.
-
 #include <bits/stdc++.h>
 using namespace std;
-
 int a[1000];       // Mảng lưu trữ hoán vị hiện tại
 int f[1000] = {0}; // Mảng đánh dấu các số đã được sử dụng
 int n, k;          // Số lượng phần tử và kích thước của hoán vị
-
 // Hàm xuất hoán vị hiện tại
 void xuat()
 {
@@ -14,7 +11,6 @@ void xuat()
         cout << a[i] << " ";
     cout << endl;
 }
-
 // Hàm đệ quy để sinh các hoán vị con
 void Try(int i)
 {
@@ -34,14 +30,11 @@ void Try(int i)
         }
     }
 }
-
 int main()
 {
     freopen("in.inp", "r", stdin);   // Đọc dữ liệu từ file in.inp
     freopen("out.out", "w", stdout); // Ghi kết quả ra file out.out
     cin >> n >> k;                   // Nhập số lượng phần tử và kích thước hoán vị
-
-    Try(1); // Bắt đầu sinh hoán vị từ vị trí 1
-
+    Try(1);                          // Bắt đầu sinh hoán vị từ vị trí 1
     return 0;
 }

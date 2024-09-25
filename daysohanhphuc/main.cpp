@@ -1,11 +1,8 @@
 // Tóm tắt đề bài: Tìm và đếm các số hạnh phúc trong một khoảng cho trước.
-
 #include <bits/stdc++.h>
 #define nmax 1000000 // Định nghĩa kích thước tối đa của mảng sàng
 using namespace std;
-
 long long f[nmax]; // Mảng lưu trạng thái số nguyên tố
-
 // Hàm sàng Eratosthenes để tìm các số nguyên tố từ 2 đến u
 void sang(long long u)
 {
@@ -15,7 +12,6 @@ void sang(long long u)
 		f[i] = 1; // Giả định tất cả là số nguyên tố
 	}
 	f[0] = f[1] = 0; // 0 và 1 không phải là số nguyên tố
-
 	for (i = 2; i * i <= u; i++)
 	{
 		if (f[i])
@@ -27,16 +23,13 @@ void sang(long long u)
 		}
 	}
 }
-
 int main()
 {
 	freopen("in.inp", "r", stdin);	 // Mở file đầu vào
 	freopen("out.out", "w", stdout); // Mở file đầu ra
 	sang(nmax);						 // Sàng nguyên tố đến giới hạn nmax
-
 	long long n;
-	cin >> n; // Nhập giá trị n từ đầu vào
-
+	cin >> n;	 // Nhập giá trị n từ đầu vào
 	int dem = 0; // Biến đếm số lượng ước số nguyên tố
 	// Duyệt qua tất cả các số từ n đến 2
 	for (long long i = n; i >= 2; i--)
@@ -47,7 +40,6 @@ int main()
 			dem++;			  // Tăng biến đếm
 		}
 	}
-
 	cout << endl
 		 << dem; // In ra số lượng ước số nguyên tố tìm được
 	return 0;

@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
 #define nmax 1000000
 using namespace std;
-
 long long f[nmax]; // Mảng đánh dấu các số nguyên tố
-
 // Hàm đánh dấu các số nguyên tố trong khoảng từ 0 đến u
 void sang(long long u)
 {
@@ -22,17 +20,13 @@ void sang(long long u)
         }
     }
 }
-
 int main()
 {
     freopen("in.inp", "r", stdin);   // Mở file đầu vào để đọc dữ liệu
     freopen("out.out", "w", stdout); // Mở file đầu ra để ghi kết quả
-
-    sang(nmax); // Tính toán và đánh dấu các số nguyên tố đến nmax
-
+    sang(nmax);                      // Tính toán và đánh dấu các số nguyên tố đến nmax
     int n;
     cin >> n; // Đọc số nguyên n từ file đầu vào
-
     // Kiểm tra xem n và (n - 1) / 2 có phải là số nguyên tố không
     if (n >= 0 && f[n] && (n - 1) % 2 == 0 && f[(n - 1) / 2])
     {
@@ -42,6 +36,5 @@ int main()
     {
         cout << "No";
     }
-
     return 0;
 }

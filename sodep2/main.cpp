@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
 #define nmax 1000000
 using namespace std;
-
 long long f[nmax]; // Mảng đánh dấu các số nguyên tố
 long long n, i;
-
 // Hàm sử dụng thuật toán Sieve of Eratosthenes để đánh dấu các số nguyên tố từ 0 đến u
 void sang(long long u)
 {
@@ -23,7 +21,6 @@ void sang(long long u)
 		}
 	}
 }
-
 // Hàm kiểm tra xem một số có phải là số nguyên tố không
 bool snt(int n)
 {
@@ -36,7 +33,6 @@ bool snt(int n)
 	}
 	return true;
 }
-
 // Hàm tính tổng bình phương các chữ số của số n
 int tongbinh(int n)
 {
@@ -50,7 +46,6 @@ int tongbinh(int n)
 	}
 	return s;
 }
-
 // Hàm kiểm tra xem tổng bình phương các chữ số của n có phải là số nguyên tố không
 bool sodep(int n)
 {
@@ -58,7 +53,6 @@ bool sodep(int n)
 	sang(nmax);
 	return f[tongbinh(n)]; // Kiểm tra xem tổng bình phương có phải là số nguyên tố không
 }
-
 int main()
 {
 	int m;

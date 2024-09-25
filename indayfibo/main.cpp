@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 long long i, n; // Khai báo biến toàn cục để lưu chỉ số và số lượng phần tử
-
 // Hàm tính số Fibonacci thứ n
 int fibo(long long n)
 {
@@ -25,14 +23,12 @@ int fibo(long long n)
     }
     return fn; // Trả về số Fibonacci thứ n
 }
-
 int main()
 {
     freopen("in.inp", "r", stdin);   // Mở file đầu vào để đọc dữ liệu
     freopen("out.out", "w", stdout); // Mở file đầu ra để ghi kết quả
-
-    cin >> n;                // Đọc số n từ đầu vào
-    for (i = 1; i <= n; i++) // Lặp từ 1 đến n
+    cin >> n;                        // Đọc số n từ đầu vào
+    for (i = 1; i <= n; i++)         // Lặp từ 1 đến n
     {
         cout << fibo(i) << " "; // Tính và in số Fibonacci thứ i
     }

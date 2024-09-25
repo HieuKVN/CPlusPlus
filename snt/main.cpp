@@ -1,12 +1,9 @@
 // Tóm tắt đề bài: Liệt kê tất cả các số nguyên tố từ 1 đến n sử dụng phương pháp sàng Eratosthenes.
-
 #include <bits/stdc++.h>
 #define nmax 1000000
 using namespace std;
-
 long long f[nmax]; // Mảng để đánh dấu số nguyên tố
 long long n, i;
-
 // Hàm đánh dấu các số nguyên tố trong khoảng từ 0 đến u
 void sang(long long u)
 {
@@ -25,23 +22,18 @@ void sang(long long u)
 		}
 	}
 }
-
 int main()
 {
 	freopen("in.inp", "r", stdin);	 // Mở file đầu vào để đọc dữ liệu
 	freopen("out.out", "w", stdout); // Mở file đầu ra để ghi kết quả
-
-	sang(nmax); // Tính toán và đánh dấu các số nguyên tố đến nmax
-
-	cin >> n; // Đọc số nguyên n từ file đầu vào
-
-	for (i = 1; i <= n; i++) // Duyệt từ 1 đến n
+	sang(nmax);						 // Tính toán và đánh dấu các số nguyên tố đến nmax
+	cin >> n;						 // Đọc số nguyên n từ file đầu vào
+	for (i = 1; i <= n; i++)		 // Duyệt từ 1 đến n
 	{
 		if (f[i]) // Nếu i là số nguyên tố
 		{
 			cout << i << " "; // In số nguyên tố ra file đầu ra
 		}
 	}
-
 	return 0;
 }

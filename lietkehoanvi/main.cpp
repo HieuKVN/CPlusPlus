@@ -1,12 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int a[1000];       // Mảng lưu trữ các hoán vị hiện tại
 int f[1000] = {0}; // Mảng đánh dấu các số đã sử dụng trong hoán vị
 int b[1000];       // Mảng lưu trữ một dãy số cần so sánh
 int n, k;
 int d = 0; // Đếm số lượng hoán vị
-
 // Hàm kiểm tra và xuất hoán vị khi nó bằng với dãy b
 void xuly1()
 {
@@ -20,7 +18,6 @@ void xuly1()
     }
     cout << d << endl; // In ra số hoán vị đạt yêu cầu
 }
-
 // Hàm kiểm tra số lượng hoán vị
 void xuly2()
 {
@@ -35,7 +32,6 @@ void xuly2()
         exit(0); // Kết thúc chương trình sau khi tìm thấy hoán vị thứ k
     }
 }
-
 // Hàm sinh các hoán vị
 void Try(int i)
 {
@@ -56,22 +52,16 @@ void Try(int i)
         }
     }
 }
-
 int main()
 {
     freopen("in.inp", "r", stdin);   // Mở file đầu vào để đọc dữ liệu
     freopen("out.out", "w", stdout); // Mở file đầu ra để ghi kết quả
-
-    cin >> n; // Đọc số lượng phần tử
-
+    cin >> n;                        // Đọc số lượng phần tử
     for (int i = 1; i <= n; i++)
     {
         cin >> b[i]; // Đọc dãy số b
     }
-
     cin >> k; // Đọc số lượng hoán vị cần kiểm tra
-
-    Try(1); // Bắt đầu sinh hoán vị từ vị trí 1
-
+    Try(1);   // Bắt đầu sinh hoán vị từ vị trí 1
     return 0;
 }

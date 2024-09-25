@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
 #define nmax 1000000
 using namespace std;
-
 long long f[nmax]; // Mảng đánh dấu các số nguyên tố
-
 // Hàm đánh dấu các số nguyên tố từ 0 đến u
 void sang(long long u)
 {
@@ -22,23 +20,18 @@ void sang(long long u)
 		}
 	}
 }
-
 int main()
 {
 	freopen("in.inp", "r", stdin);	 // Mở file đầu vào để đọc dữ liệu
 	freopen("out.out", "w", stdout); // Mở file đầu ra để ghi kết quả
-
-	sang(nmax); // Tính toán và đánh dấu các số nguyên tố đến nmax
-
+	sang(nmax);						 // Tính toán và đánh dấu các số nguyên tố đến nmax
 	int n, k;
 	cin >> n >> k; // Đọc hai số nguyên n và k từ file đầu vào
-
 	// Kiểm tra các số từ 3 đến n để tìm các cặp số nguyên tố (i, i + k)
 	for (int i = 3; i <= n; i++)
 	{
 		if (f[i] && f[i + k])					 // Nếu cả i và i + k đều là số nguyên tố
 			cout << i << " " << (i + k) << endl; // In cặp số
 	}
-
 	return 0;
 }

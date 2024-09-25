@@ -1,11 +1,8 @@
 #include <bits/stdc++.h>
-
 #define nmax 1000000
 using namespace std;
-
 long long f[nmax]; // Mảng lưu giá trị xác định số nguyên tố
 long long a, b, i;
-
 // Hàm đánh dấu các số nguyên tố trong khoảng từ 0 đến u
 void sang(long long u)
 {
@@ -24,7 +21,6 @@ void sang(long long u)
         }
     }
 }
-
 // Hàm kiểm tra xem có bất kỳ chữ số nào của u là số nguyên tố không
 bool kitu(long long u)
 {
@@ -37,7 +33,6 @@ bool kitu(long long u)
     }
     return false; // Nếu không có chữ số nào là số nguyên tố
 }
-
 int main()
 {
     sang(nmax);                      // Tính toán và đánh dấu các số nguyên tố đến nmax
