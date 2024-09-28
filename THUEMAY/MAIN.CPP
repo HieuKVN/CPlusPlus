@@ -29,8 +29,8 @@ int main()
     }
     // Sắp xếp các công việc theo thời gian kết thúc
     sort(a.begin(), a.end(), cmp);
-    vector<int> f(n, 0);    // Mảng lưu số tiền tối đa khi kết thúc công việc i
-    vector<int> vet(n, -1); // Mảng lưu chỉ số công việc trước công việc i
+    vector<int> f(n, 0);   // Mảng lưu số tiền tối đa khi kết thúc công việc i
+    vector<int> vet(n, 0); // Mảng lưu chỉ số công việc trước công việc i
     // Tính toán số tiền tối đa có thể thu được và theo dõi các công việc
     for (int i = 0; i < n; i++)
     {
