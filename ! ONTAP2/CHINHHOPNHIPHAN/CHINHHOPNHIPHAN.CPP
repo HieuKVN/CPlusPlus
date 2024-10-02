@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define nmax 100000
-int n, x, i;
-int a[nmax];
-int f[nmax] = {0};
-void Xuat()
+#define nmax 100
+int a[nmax], n, k;
+void xuat()
 {
     for (int i = 1; i <= n; i++)
     {
@@ -19,7 +17,7 @@ void Try(int i)
         a[i] = j;
         if (i == n)
         {
-            Xuat();
+            xuat();
         }
         else
             Try(i + 1);
@@ -27,9 +25,7 @@ void Try(int i)
 }
 int main()
 {
-    freopen("NHIPHAN.INP", "r", stdin);
-    freopen("NHIPHAN.OUT", "w", stdout);
-    cin >> n;
+    n = 2;
     Try(1);
     return 0;
 }

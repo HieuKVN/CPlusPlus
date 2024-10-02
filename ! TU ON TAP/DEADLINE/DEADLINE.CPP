@@ -23,16 +23,35 @@ int main()
         a[i].id = i + 1;
     }
     sort(a.begin(), a.end(), cmp);
-    int d = 0;
-    vector<int> res;
+    int s = 0;
+
+    int kq[100] = {0};
+    bool check[100] = {false};
+
     for (int i = 0; i < n; i++)
+
     {
+        for (int j = min(n, a[i].dl); j >= 1; j--)
+        {
+            if (check[j] == false)
+            {
+                check[j] = true;
+                kq[j] = i;
+                s += a[i].ln;
+                break;
+            }
+        }
     }
 
-    cout << d << endl;
-    for (int x : res)
+    cout << s << endl;
+
+    for (int i = 0; i < n; i++)
     {
-        cout << x << " ";
+        if (check[i] == true)
+        {
+            cout << a[kq[i]].id << " ";
+        }
     }
+
     return 0;
 }
