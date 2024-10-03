@@ -57,10 +57,6 @@ int main()
     }
     k = b[n];
     n--;
-    for (int i = 1; i <= n; i++)
-    {
-        cin >> a[i];
-    }
     Try(1);
     return 0;
 }
